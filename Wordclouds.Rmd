@@ -1,0 +1,34 @@
+---
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r pressure, echo=FALSE}
+library(wordcloud2)
+library(knitr)
+library(viridis)
+library(webshot)
+library(htmlwidgets)
+
+df <- read.csv(file = 'D:/old files/Project/Portfolio/Trendy words/SR_c.csv', header=FALSE)
+
+set.seed(42)
+df
+cloud <- wordcloud2(df[order(df$V2, decreasing = TRUE), ],
+           size=0.3,
+           color= viridis(nrow(df)),
+           backgroundColor="rgba(255, 255, 255, 0)",
+           ellipticity = 1.0)
+cloud
+
+# saveWidget(cloud,"1.html",selfcontained = F)
+# webshot::webshot("1.html","1.png",vwidth = 200, vheight = 200, delay =10)
+
+
+```
+
+

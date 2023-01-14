@@ -1,2 +1,7 @@
 # pdf-analysis
-Parse a number of reports in pdf to get buzzwords and to check numbers for Benford's distribution
+Parse a number of reports in pdf to get buzzwords and to check numbers for Benford's distribution.
+Pet-project
+Проанализированы pdf годовых отчетов российских компаний. Отчеты группировались в несколько категорий: по отчетным годам и по размерам компаний. 
+По этим категориям выделялись 100 наиболее популярныз слов (Buzzwords ru.ipynb), затем строились облака слов (Wordcloud.RMD). 
+Числа из отчетов проверены на соответствие распределению Бенфорда по первой и по первым двум цифрам (Benford.ipynb).
+По итогам расчетов подготовлена презентация (Статистический взгляд на отчетность.pdf), которая была представлена на конференции Московской биржи по итогам ежегодного конкурса годовых отчетов.
